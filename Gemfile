@@ -7,8 +7,8 @@ gem 'rails', '4.2.3'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'mongo'
-#gem 'redis'
-#gem 'sqlite3'
+gem 'redis'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.3'
 # Use Uglifier as compressor for JavaScript assets
