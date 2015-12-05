@@ -6,7 +6,7 @@ mongo_uri = 'mongodb://heroku_1lfh5b08:k8di7ss33j6lndhcg76j87jd27@ds063134.mongo
 
 begin
     #Connecting to the Mongo Client
-    client = Mongo::Client.new([ 'ds063134.mongolab.com' ],:database =>'heroku_1lfh5b08',:user=>'heroku_1lfh5b08',:password=>'k8di7ss33j6lndhcg76j87jd27');
+    client = Mongo::Client.new([ 'ds063134.mongolab.com:63134' ],:database =>'heroku_1lfh5b08',:user=>'heroku_1lfh5b08',:password=>'k8di7ss33j6lndhcg76j87jd27');  
     puts "Successfully connected to mongo db"
     db = client.database
     db.collection_names.each{|name| puts name }
