@@ -13,7 +13,7 @@ begin
         college=db.collection('universities')
         
     CSV.foreach('sample.csv', :headers => true) do |csv_obj|
-               result=college.insert_one({ :unitid => csv_obj['UNITID'], :opeid => csv_obj['OPEID'], :opeid6 => csv_obj['opeid6'], :instnm => csv_obj['INSTNM'], :city => csv_obj['CITY'], :stabbr => csv_obj['STABBR'], :insturl => csv_obj['INSTURL']})
+               result=college.insert_one({ :rowid => csv_obj['ROWID'], :unitid => csv_obj['UNITID'], :opeid => csv_obj['OPEID'], :opeid6 => csv_obj['opeid6'], :instnm => csv_obj['INSTNM'], :city => csv_obj['CITY'], :stabbr => csv_obj['STABBR'], :insturl => csv_obj['INSTURL']})
                 
         end    
         puts "Insertion into mongo db successful"
