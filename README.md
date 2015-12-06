@@ -40,7 +40,7 @@ Ubuntu Commands to deploy to Heroku Server
 
     heroku login
     git clone https://github.com/sumanthpikkili/cse5335-sxp0941-3.git
-    cd cse5335-1001100941
+    cd cse5335-sxp0941-3
     heroku create cse5335-project-3
     git push heroku master
     heroku open
