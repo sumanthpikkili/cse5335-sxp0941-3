@@ -5,7 +5,7 @@
 
 Heroku Website
 
-    https://cse5335-project-3.herokuapp.com
+    cse5335-project-3.herokuapp.com
     
 NOSQL Database
 
