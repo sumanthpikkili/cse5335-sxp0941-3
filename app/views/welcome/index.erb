@@ -2,7 +2,7 @@
 <head>
   <title>Universities List</title>
 
-
+<!-- Defining the internal style sheets-->
 <style>
 
 	body {
@@ -14,6 +14,7 @@
 	       
 			font-family: cursive;
 			font-size: 100%;
+			 margin-left:550px;
 			
 			}
 			
@@ -34,19 +35,31 @@ table#univs th	{
 		
 </style>
 
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script>
+         $(function() {
+            $( "#button-1").button();
+            $( "#button-1" ).buttonset();
+         });
+      </script>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <script>
 
 $(document).ready(function(){
+//Counter to keep a track of the number of records displayed on the web page
 var count = 1;
 $("#univs").hide();
 
 $("button").click(function(){
  $("#univs").show();
+ 
+ //Set interval function to set a 0.5 seconds delay
 setInterval(function(){
 			
-
+			//JQuery AJAX request to get the data from the controller which retrieves data from the NOSQL Mongo database
 	        $.get("maincontroller/output/"+ count.toString(), function(data)
 				 
 		   {
@@ -57,8 +70,9 @@ setInterval(function(){
             
 				for (var i = 0; i < data.length; i++)
 	             {     
+	                 //Appending the rows to the table
 				      
-                      var row = $("<tr/>");
+                      var row = $("<tr id='"+count+"'>");
 				      $("#tbody1").append(row).delay(500).fadeIn("slow");
 					  row.append($("<td>" + data[i].unitid + "</td>"));
 					  row.append($("<td>" + data[i].opeid + "</td>"));
@@ -66,7 +80,11 @@ setInterval(function(){
 					  row.append($("<td>" + data[i].instnm + "</td>"));
 					  row.append($("<td>" + data[i].city + "</td>"));	
 					  row.append($("<td>" + data[i].stabbr + "</td>"));
-					  row.fadeIn();
+					  row.append($("</tr>"));
+					  $("#tbody1 tr#"+count).hide();
+              		  $("#tbody1 tr#"+count).fadeIn("slow");
+              		  
+              		  //Clearing the old records after 20 records have been displayed
 					  if(count%21 == 0)
 					 {
 						 $('#univs tbody').html("");
@@ -90,8 +108,8 @@ setInterval(function(){
 </head>
 
 <body>
-<h2> UNIVERSITIES LIST </h2>
-<button> CLICK ME  </button>
+<h3 align="center"> LIST OF UNIVERSITIES </h3>
+<button id="button-1" style="color:blue"> SHOW UNIVERSITIES </button>
 <br/>
 <br/>
 
