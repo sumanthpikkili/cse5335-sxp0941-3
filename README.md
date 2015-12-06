@@ -17,6 +17,14 @@ What aspect of the implementation did you find hard, if any, and why?
 
 
 
+Ubuntu Commands to Upload Code to Github
+
+    git init
+    echo "# cse5335-sxp0941-3" >> README.md
+    git add README.md
+    git commit -m "Final Commit"
+    git remote add origin https://github.com/sumanthpikkili/CSE5335-Project1.git
+    git push -u origin master
 
 Sharing
 
