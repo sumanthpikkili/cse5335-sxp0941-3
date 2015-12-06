@@ -6,15 +6,25 @@
 Heroku Website
 
     https://cse5335-project-3.herokuapp.com
+    
+NOSQL Database
+
+    Heroku MongoLab
+
+Instructions to Test
+
+    - Open the project 3 heroku website (URL mentioned above)
+    - Click on the "Show Universities" button to show the list of universities, 20 records at a time with a 0.5 second delay between the display of each record and a fadeIn animation for the arrival of each record.
 
 
 What aspect of the implementation did you find easy, if any, and why?
 
- 
+    I found inserting into the Heroku Mongo database easy as I have already worked on inserting records from csv file into the Mongo DB in Project 2. I also found retrieving from the Mongo database easy as I had worked on rendering JSON data from the controller in Project 1 and the only difference in this project was to render contents of Mongo database instead of JSON data.
     
 
 What aspect of the implementation did you find hard, if any, and why?
 
+    I found making multiple AJAX requests difficult. My initial thought was to use a for loop to make 100 Ajax style requests. However, using this logic, I found difficulties in clearing the records after 20 records were displayed on the browser. Thus, I had to use the JQuery setInterval method to produce the 0.5 seconds delay and clear the records.
 
 
 Ubuntu Commands to Upload Code to Github
@@ -25,7 +35,15 @@ Ubuntu Commands to Upload Code to Github
     git commit -m "Final Commit"
     git remote add origin https://github.com/sumanthpikkili/cse5335-sxp0941-3.git
     git push -u origin master
-    
+
+Ubuntu Commands to deploy to Heroku Server
+
+    heroku login
+    git clone https://github.com/sumanthpikkili/cse5335-sxp0941-3.git
+    cd cse5335-1001100941
+    heroku create cse5335-project-3
+    git push heroku master
+    heroku open
 
 
 Sharing
