@@ -15,6 +15,10 @@ Server - Side Framework
 
     Rails
     
+Browser Framework
+
+    JQuery
+    
 Instructions to Test
 
     - Open the project 3 heroku website (URL mentioned above)
