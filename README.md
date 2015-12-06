@@ -11,6 +11,10 @@ NOSQL Database
 
     Heroku MongoLab
 
+Server - Side Framework
+
+    Rails
+    
 Instructions to Test
 
     - Open the project 3 heroku website (URL mentioned above)
