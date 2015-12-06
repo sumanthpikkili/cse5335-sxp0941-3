@@ -23,8 +23,10 @@ Ubuntu Commands to Upload Code to Github
     echo "# cse5335-sxp0941-3" >> README.md
     git add README.md
     git commit -m "Final Commit"
-    git remote add origin https://github.com/sumanthpikkili/CSE5335-Project1.git
+    git remote add origin https://github.com/sumanthpikkili/cse5335-sxp0941-3.git
     git push -u origin master
+    
+
 
 Sharing
 
