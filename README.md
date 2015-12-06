@@ -26,6 +26,9 @@ What aspect of the implementation did you find hard, if any, and why?
 
     I found making multiple AJAX requests difficult. My initial thought was to use a for loop to make 100 Ajax style requests. However, using this logic, I found difficulties in clearing the records after 20 records were displayed on the browser. Thus, I had to use the JQuery setInterval method to produce the 0.5 seconds delay and clear the records.
 
+If you were to use these technologies professionally, what would be your biggest concern?
+
+    I would definitely prefer using Ruby in a professional environment as Ruby is very easy to learn and simple to understand and implement provided you have prior knowledge on the best practises, OOP, functional programming etc. On the other hand, Ruby on Rails, the web framework, is not so easy to learn. If you want to do small projects, you can use Rails out of the box and do well. For moderately larger projects, you will need to understand more of the underpinnings and then it becomes trickier. In the IT industry, there are usually very large projects and a huge development team too. Spending the time and effort to understand Rails completely would definitely be a big concern professionally.
 
 Ubuntu Commands to Upload Code to Github
 
